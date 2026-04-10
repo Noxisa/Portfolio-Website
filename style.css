@@ -1,0 +1,118 @@
+:root {
+  --bg: #0A0A0F;
+  --surface: #12121A;
+  --text: #E0E0FF;
+  --accent-cyan: #00D4FF;
+  --accent-pink: #FF2E63;
+  --accent-green: #39FF14;
+  --glow-cyan: 0 0 15px #00D4FF;
+  --glow-pink: 0 0 15px #FF2E63;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Subtle cyber grid background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  z-index: 1000;
+}
+
+.neon-text {
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.btn {
+  padding: 12px 28px;
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--accent-cyan);
+  color: #0A0A0F;
+  box-shadow: var(--glow-cyan);
+}
+
+.primary { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+.secondary { border-color: var(--accent-pink); color: var(--accent-pink); }
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  border-color: var(--accent-cyan);
+}
+
+.card-image {
+  height: 180px;
+  background-size: cover;
+  position: relative;
+}
+
+.card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(10,10,15,0.8));
+}
+
+/* Typing effect */
+.typing {
+  overflow: hidden;
+  border-right: 3px solid var(--accent-cyan);
+  white-space: nowrap;
+  animation: typing 3.5s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-cyan); }
+}
