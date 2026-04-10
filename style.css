@@ -86,6 +86,7 @@ body::before {
 /* Hero Section */
 .hero {
   min-height: 100vh;
+  margin-top: 90px;
   display: flex;
   align-items: center;
   padding: 0 5%;
@@ -160,7 +161,11 @@ body::before {
 }
 
 .project-card {
-  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(18, 18, 26, 0.7);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 212, 255, 0.35);
   border-radius: 12px;
   overflow: hidden;
@@ -176,7 +181,15 @@ body::before {
 .card-image {
   height: 230px;
   background-size: cover;
+  position: relative;
   background-position: center;
+}
+
+.card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.5); /* przyciemnia */
 }
 
 .card-content {
@@ -232,8 +245,12 @@ footer {
   }
   
   .section {
-    padding: 80px 5% 70px;
+      padding: 140px 5% 120px;
   }
+
+  h1, h2, h3 {
+  line-height: 1.2;
+}
   
   .projects-grid {
     grid-template-columns: 1fr;
