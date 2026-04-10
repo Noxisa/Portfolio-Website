@@ -1,4 +1,4 @@
-onst themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById('theme-toggle');
 let isDark = true;
 
 themeToggle.addEventListener('click', () => {
