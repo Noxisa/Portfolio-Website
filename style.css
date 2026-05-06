@@ -252,6 +252,39 @@ body::before {
   font-size: 0.95rem;
   opacity: 0.6;
 }
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.social-btn {
+  padding: 14px 32px;
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.social-btn:hover {
+  background: var(--accent-cyan);
+  color: #0F0F1F;
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-4px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 3rem 5% 2rem;
+  border-top: 1px solid rgba(0, 240, 255, 0.3);
+  opacity: 0.8;
+}
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
