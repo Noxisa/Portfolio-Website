@@ -3,110 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomaš Chmelevski | Portfolio</title>
+  <meta name="description" content="Tomaš Chmelevski - Full-Stack Developer. Portfolio with React, Node.js, TypeScript, .NET and Machine Learning projects.">
+  <meta name="author" content="Tomaš Chmelevski">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tomaš Chmelevski | Full-Stack Developer">
+  <meta property="og:description" content="Full-Stack Developer specializing in React, Node.js, TypeScript and Machine Learning.">
+  <meta property="og:type" content="website">
+  
+  <title>Tomaš Chmelevski | Full-Stack Developer</title>
+  
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button id="theme-toggle" class="theme-btn">🌑</button>
-        <button class="hamburger">☰</button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 class="typing">Hi, I'm <span class="highlight">Tomaš Chmelevski</span></h1>
-      <p class="subtitle">Full-Stack Developer • Software development</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">View My Projects</a>
-        <a href="#contact" class="btn secondary">Get In Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">Web Developer with a Bachelor's degree in Computer Science and hands-on commercial experience using React, Node.js, TypeScript, PHP, and .NET. 
-      Currently expanding skills in Full-Stack Engineering and Machine Learning by building intelligent, data-driven web applications. 
-      Delivered real-world solutions including custom WordPress systems and full-stack platforms. Strong problem-solver, eager to grow in a professional development environment.</p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="card-image" style="background: linear-gradient(45deg, #00D4FF, #FF2E63);"></div>
-        <div class="card-content">
-          <h3> Custom Wooden Furniture E-commerce</h3>
-          <p>Modern, responsive online store for ordering custom-made wooden furniture.
-Clean, fast, intuitive — works beautifully on desktop, tablet, and mobile..</p>
-          <div class="tech-stack">React • Node.js + Express • PostgreSQL • JWT + Bcrypt • Git & Github</div>
-          <a href="#" class="btn small"> View Project → </a>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">TC</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌑</button>
+          <button class="hamburger" aria-label="Open menu">☰</button>
         </div>
       </div>
+    </nav>
+  </header>
 
-      <div class="project-card" class="section">
-        <div class="card-image" style="background: linear-gradient(45deg, #39FF14, #00D4FF);"></div>
-        <div class="card-content">
-          <h3>Job Skill Matcher</h3>
-          <p>he Job Skill Matcher application analyzes a resume and a job description to determine how well a candidate matches the job requirements.</p>
-          <div class="tech-stack">Next.js • ASP.NET Core API • ML.NET • Git & Github</div>
-          <a href="#" class="btn small"> View Project → </a>
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="typing">Tomaš <span class="highlight">Chmelevski</span></h1>
+        <p class="subtitle">Full-Stack Developer • React • Node.js • TypeScript • .NET</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn secondary">Get In Touch</a>
+          <a href="path/to/your-cv.pdf" class="btn secondary" target="_blank">Download CV</a>
         </div>
       </div>
-    
+    </section>
 
+    <!-- About -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p class="about-text">
+          Web Developer with a Bachelor's degree in Computer Science and commercial experience 
+          using <strong>React</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>, 
+          <strong>PHP</strong> and <strong>.NET</strong>.
+        </p>
+        <p class="about-text">
+          Currently expanding skills in Full-Stack Engineering and Machine Learning by building 
+          intelligent, data-driven applications. Delivered real-world solutions including custom 
+          WordPress systems and full-stack platforms.
+        </p>
+        <p class="about-text">
+          Strong problem-solver, eager to grow in a professional development environment.
+        </p>
+      </div>
+    </section>
 
-    <div class="project-card" class="section">
-        <div class="card-image" style="background: linear-gradient(45deg, #39FF8A, #00F0FF);"></div>
-        <div class="card-content">
-          <h3>Mini-Zapier Automation Platform Implementation Plan</h3>
-          <p>Building a comprehensive automation platform that allows users to create "if→then" workflows, integrate various services (email, webhooks, APIs), add custom actions, set schedules, generate notifications, and use AI to create automations. The platform will include monetization features like paid automations, premium integrations, and data export capabilities.</p>
-          <div class="tech-stack">TypeScript • Javascript • CSS • Git & Github</div>
-          <a href="#" class="btn small">View Project →</a>
+    <!-- Skills (nowa sekcja) -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>JavaScript</span>
+            <span>HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>ASP.NET Core</span>
+            <span>PHP</span>
+            <span>PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Other</h3>
+          <div class="skill-tags">
+            <span>Git & GitHub</span>
+            <span>JWT</span>
+            <span>ML.NET</span>
+            <span>WordPress</span>
+          </div>
         </div>
       </div>
+    </section>
 
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
 
-    <div class="project-card" class="section">
-        <div class="card-image" style="background: linear-gradient(45deg, #FF2EFF, #00F0FF);"></div>
-        <div class="card-content">
-          <h3>Jammming</h3>
-          <p>In this project, you will build a React web application called Jammming. You will use your knowledge of React components, passing state, and requests with the Spotify API to build a website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.</p>
-          <div class="tech-stack">HTML • CSS • JavaScript • React • Git & Github</div>
-          <a href="#" class="btn small">View Project →</a>
-        </div>
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #00D4FF, #FF2E63);"></div>
+          <div class="card-content">
+            <h3>Custom Wooden Furniture E-commerce</h3>
+            <p>Modern, responsive online store for ordering custom-made wooden furniture. Clean, fast and fully mobile-friendly.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>PostgreSQL</span>
+              <span>JWT</span>
+            </div>
+            <div class="project-links">
+              <a href="LINK_DO_LIVE" class="btn small" target="_blank">Live Demo</a>
+              <a href="LINK_DO_GITHUB" class="btn small secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #39FF14, #00D4FF);"></div>
+          <div class="card-content">
+            <h3>Job Skill Matcher</h3>
+            <p>Application that analyzes a resume and job description to calculate how well a candidate matches the requirements using Machine Learning.</p>
+            <div class="tech-stack">
+              <span>Next.js</span>
+              <span>ASP.NET Core</span>
+              <span>ML.NET</span>
+            </div>
+            <div class="project-links">
+              <a href="LINK_DO_LIVE" class="btn small" target="_blank">Live Demo</a>
+              <a href="LINK_DO_GITHUB" class="btn small secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #39FF8A, #00F0FF);"></div>
+          <div class="card-content">
+            <h3>Mini-Zapier Automation Platform</h3>
+            <p>Platform for creating "if → then" workflows with integrations (email, webhooks, APIs), scheduling, notifications and AI-assisted automation creation.</p>
+            <div class="tech-stack">
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="LINK_DO_LIVE" class="btn small" target="_blank">Live Demo</a>
+              <a href="LINK_DO_GITHUB" class="btn small secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="card-image" style="background: linear-gradient(135deg, #FF2EFF, #00F0FF);"></div>
+          <div class="card-content">
+            <h3>Jammming – Spotify Playlist Builder</h3>
+            <p>React application that lets users search the Spotify library, create custom playlists and save them directly to their Spotify account.</p>
+            <div class="tech-stack">
+              <span>React</span>
+              <span>Spotify API</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="LINK_DO_LIVE" class="btn small" target="_blank">Live Demo</a>
+              <a href="LINK_DO_GITHUB" class="btn small secondary" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
       </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="contact-text">I'm currently open to new opportunities. Feel free to reach out!</p>
+      <div class="social-links">
+        <a href="https://github.com/Noxisa" target="_blank" class="social-btn" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/toma%C5%A1-chmelevski-762b5b283/" target="_blank" class="social-btn" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:tchmelevski@gmail.com" class="social-btn">Email</a>
       </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Contact -->
- <section id="contact" class="section">
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="social-links">
-      <a href="https://github.com/Noxisa" target="_blank" class="social-btn">GitHub</a>
-      <a href="https://www.linkedin.com/in/toma%C5%A1-chmelevski-762b5b283/" target="_blank" class="social-btn">LinkedIn</a>
-      <a href="mailto:tchmelevski@gmail.com" class="social-btn">Email</a>
-    </div>
-  </section>
-
- <footer class="footer">
+  <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2026 Tomaš Chmelevski </p>
+      <p>&copy; 2026 Tomaš Chmelevski. Built with ❤️</p>
     </div>
   </footer>
 
