@@ -1,46 +1,39 @@
-// Dark/Light Toggle
-const themeToggle = document.getElementById('theme-toggle');
-let isDark = true;
+// Theme toggle
+const themeBtn = document.getElementById('theme-toggle');
+const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-    isDark = !isDark;
-    if (isDark) {
-        document.documentElement.style.setProperty('--bg', '#0F0F1F');
-        document.documentElement.style.setProperty('--surface', '#1A1A2E');
-        document.documentElement.style.setProperty('--text', '#F0F4FF');
-    } else {
-        document.documentElement.style.setProperty('--bg', '#1A1A2E');
-        document.documentElement.style.setProperty('--surface', '#2A2A45');
-        document.documentElement.style.setProperty('--text', '#F0F0FF');
-    }
-    themeToggle.textContent = isDark ? '🌑' : '☀️';
-});
-
-// Safe Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === "#" || targetId === "# ") return;
-
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-            e.preventDefault();
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Hamburger Click
-const hamburger = document.querySelector('.hamburger');
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        alert("📱 Mobile menu coming soon!\n\nFor now you can use the navigation links.");
-    });
+// Load saved theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  body.classList.add('light');
+  themeBtn.textContent = '☀️';
+} else {
+  themeBtn.textContent = '🌑';
 }
 
-window.addEventListener('load', () => {
-    console.log('%c✅ Portfolio loaded ⚡', 'color: #00F0FF; font-weight: bold;');
+themeBtn.addEventListener('click', () => {
+  body.classList.toggle('light');
+  
+  if (body.classList.contains('light')) {
+    themeBtn.textContent = '☀️';
+    localStorage.setItem('theme', 'light');
+  } else {
+    themeBtn.textContent = '🌑';
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
+// Mobile menu (hamburger)
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
 });
